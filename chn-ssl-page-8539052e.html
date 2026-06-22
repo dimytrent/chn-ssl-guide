@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于 2026 世界杯联合站点 · 信息说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f6fbfa;
+      color: #1e2c2a;
+      line-height: 1.6;
+      padding: 0 1.2rem;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.6rem 0 3rem;
+    }
+
+    /* hero 区 */
+    .hero {
+      background: linear-gradient(145deg, #d7efe9 0%, #b0d9cf 100%);
+      border-radius: 2rem;
+      padding: 3rem 2rem;
+      margin-bottom: 2.8rem;
+      text-align: center;
+      box-shadow: 0 12px 28px rgba(0, 60, 50, 0.08);
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: #0a3b34;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 640px;
+      margin: 0.4rem auto 1.2rem;
+      color: #1b4f48;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(2px);
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #0a5a4f;
+      border: 1px solid #9ccfc2;
+      margin-top: 0.6rem;
+    }
+
+    /* 网格卡片区 — 优势 / 说明 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.6rem;
+      margin: 2.6rem 0 3rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 1.6rem;
+      padding: 1.8rem 1.5rem 1.6rem;
+      box-shadow: 0 6px 14px rgba(16, 60, 50, 0.04);
+      border: 1px solid #dceee7;
+      transition: transform 0.15s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 24px rgba(0, 70, 55, 0.08);
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #0b4b42;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .card h3 span {
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      color: #2f4843;
+      font-size: 0.95rem;
+    }
+
+    /* 说明区 (更正文风) */
+    .info-block {
+      background: #e1f1eb;
+      border-radius: 2rem;
+      padding: 2.2rem 2rem;
+      margin: 2.4rem 0 2.8rem;
+      border-left: 6px solid #23967f;
+    }
+
+    .info-block h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #073d36;
+      margin-bottom: 1rem;
+    }
+
+    .info-block p {
+      max-width: 780px;
+      color: #1d4941;
+      margin-bottom: 1.2rem;
+    }
+
+    .info-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .info-block strong {
+      color: #045f4e;
+    }
+
+    .inline-link {
+      color: #0f6d5b;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dashed #4faa94;
+      transition: border 0.15s;
+    }
+
+    .inline-link:hover {
+      border-bottom: 1px solid #0b5f4d;
+    }
+
+    /* FAQ 摘要 */
+    .faq-summary {
+      margin: 2.8rem 0 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 1.2rem;
+      padding: 1.2rem 1.6rem;
+      border: 1px solid #cdded7;
+    }
+
+    .faq-item h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #0e443b;
+      margin-bottom: 0.3rem;
+    }
+
+    .faq-item p {
+      font-size: 0.93rem;
+      color: #3b5e56;
+    }
+
+    .faq-more {
+      text-align: right;
+      font-size: 0.95rem;
+      color: #2a7b6a;
+      margin-top: 0.2rem;
+    }
+
+    /* 底部链接区 */
+    .footer-links {
+      border-top: 1px solid #c5ddd4;
+      padding-top: 1.8rem;
+      margin-top: 2.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.9rem;
+      color: #3f6a60;
+    }
+
+    .footer-links a {
+      color: #166656;
+      text-decoration: none;
+      border-bottom: 1px dotted #69b09c;
+      margin: 0 0.3rem;
+    }
+
+    .footer-links a:hover {
+      border-bottom: 1px solid #0b5e4c;
+    }
+
+    .footer-meta {
+      font-size: 0.8rem;
+      color: #6b8a80;
+    }
+
+    @media (max-width: 540px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero {
+        padding: 2rem 1.2rem;
+      }
+
+      .info-block {
+        padding: 1.6rem 1.2rem;
+      }
+
+      .card-grid {
+        gap: 1.2rem;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 0.6rem;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- hero 区 -->
+    <section class="hero">
+      <h1>关于 2026 世界杯 · 信息导航</h1>
+      <p>了解这个联合站点的定位、背景与常见问题，让你快速熟悉我们提供的全景内容。</p>
+      <div class="badge">⚽ 联合信息 · 可信来源</div>
+    </section>
+
+    <!-- 卡片网格：优势 / 特点 -->
+    <div class="card-grid">
+      <div class="card">
+        <h3><span>📋</span> 整合视角</h3>
+        <p>汇集多路公开信息，从赛程、场馆到球队动态，以清晰结构呈现。不求冗余，但求有用。</p>
+      </div>
+      <div class="card">
+        <h3><span>🔎</span> 场景分类</h3>
+        <p>无论是关注小组赛还是淘汰赛阶段，都可以按需浏览，不遗漏关键节点。</p>
+      </div>
+      <div class="card">
+        <h3><span>🧭</span> 快速定位</h3>
+        <p>每个模块独立编排，减少跳转成本。适合希望在短时间内获取 2026 世界杯概览的访客。</p>
+      </div>
+      <div class="card">
+        <h3><span>🔄</span> 持续更新</h3>
+        <p>站点内容会随着赛程推进而调整，补充新的说明与数据。保持信息的时效性。</p>
+      </div>
+    </div>
+
+    <!-- 说明区：更详细的可信说明与介绍 -->
+    <section class="info-block">
+      <h2>站点说明 · 我们做了什么</h2>
+      <p>
+        <strong>chn-ssl-united2026.com</strong> 是一个围绕 2026 年美加墨世界杯搭建的轻量信息站。
+        我们不生产官方公告，而是将分散在不同渠道的公开内容——主办城市、比赛场地、参赛队伍背景、
+        历史数据等——进行整理与归类。你可以把它理解为一个“集中索引”：当你需要快速确认某一项赛事信息时，
+        不需要在多个页面间反复切换。
+      </p>
+      <p>
+        例如，如果你想系统了解这一届 <a href="https://chn-ssl-united2026.com" class="inline-link">世界杯</a> 
+        的申办历程、扩军后的赛制变化以及联合主办的特点，站内都有对应的简述卡片与外部参考指引。
+        我们尽量采用平实的语言描述，避免过度渲染或主观评判。
+      </p>
+      <p>
+        站点由一群热爱足球的爱好者维护，内容来源均备注引用。如果你发现信息过时或有偏差，
+        欢迎通过页面底部的方式反馈。我们不是官方，但力求靠谱。
+      </p>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <h2 style="font-size:1.4rem; font-weight:600; color:#0d4d40; margin-top:0.4rem;">常见疑问 · 摘要</h2>
+    <div class="faq-summary">
+      <div class="faq-item">
+        <h4>❓ 这个站和 FIFA 官方是什么关系？</h4>
+        <p>没有隶属关系。我们是一个非官方的信息整理与介绍页面，所有公开数据均来自官方媒体或可靠体育机构。</p>
+      </div>
+      <div class="faq-item">
+        <h4>❓ 为什么叫“联合站点”？</h4>
+        <p>2026 世界杯由美国、加拿大、墨西哥联合举办，我们想从三个主办国的视角来展示场馆与城市信息，因此取名 united。</p>
+      </div>
+      <div class="faq-item">
+        <h4>❓ 信息多久更新一次？</h4>
+        <p>重大节点（抽签、赛程发布、场馆变更等）后 48 小时内更新。日常维护周期约每周一次。</p>
+      </div>
+      <div class="faq-more">—— 更多内容可浏览站内 FAQ 专页 ——</div>
+    </div>
+
+    <!-- 底部链接 -->
+    <footer class="footer-links">
+      <div>
+        <a href="https://chn-ssl-united2026.com">世界杯</a> 
+        <span style="margin:0 0.2rem;">·</span>
+        <a href="#">赛程概览</a>
+        <span style="margin:0 0.2rem;">·</span>
+        <a href="#">主办城市</a>
+        <span style="margin:0 0.2rem;">·</span>
+        <a href="#">关于本站</a>
+      </div>
+      <div class="footer-meta">
+        © 2025 · 非官方信息页 · 仅供浏览参考
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
